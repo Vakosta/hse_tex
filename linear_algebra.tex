@@ -39,8 +39,63 @@
     \tableofcontents
     \newpage
 
-    \section{Вопросы}
+    \section{Общая алгебра}
     \begin{colloq}
+
+        \subsection{Важные нюансы}
+
+        \(A \setminus B\) — множество элементов, которые входят в \(A\), но не входят в \(B\).
+
+
+        \newline
+
+        \subsection{Виды групп}\label{subsec:виды-групп}
+
+        \begin{definition}
+            \(Z_n\) — классы целых чисел, имеющих одинаковый остаток при делении на \(n\).
+        \end{definition}
+
+        \begin{definition}
+            \(D\) — группа Диэдра.
+            Группа симметрий правильного n-угольника.\newline
+            Обозначение: \(D_n\). \(|D_n| = 2n\), т.к. там есть \(n\) вращений и \(n\) отражений.\newline
+            \(D_n = <r, s>\), где \(r^n = id, s^2 = id; s^{-1}rs = r^{-1}\).
+        \end{definition}
+
+        \begin{definition}
+            \(Q\) — группа кватернионов.
+            \(Q_8 = \{ \pm 1, \pm i, \pm j, \pm k \mid i^2 = j^2 = k^2 = ijk = -1 \}\)
+        \end{definition}
+
+        \begin{definition}
+            \(A\) — знакопеременная группа, симметрическая.
+            Т.е. множество всех чётных подстановок.
+            \(|A_n| = \frac{n!}{2}\); \(A_n \subset S_n\).
+
+            \(\begin{array}{rrrrrrrrr}
+                  * & 1 & -1 & i & -i & j & -j & k & -k \\ \cline{2-9}
+                  1 & \multicolumn{1}{|c}{1}   & -1 & i & -i & j & -j & k & -k \\
+                  -1 & \multicolumn{1}{|c}{-1} & 1 & -i & i & -j & j & -k & k \\
+                  i & \multicolumn{1}{|c}{i}   & -i & -1 & 1 & k & -k & -j & j \\
+                  -i & \multicolumn{1}{|c}{-i} & i & 1 & -1 & -k & k & j & -j \\
+                  j & \multicolumn{1}{|c}{j}   & -j & -k & k & -1 & 1 & i & -i \\
+                  -j & \multicolumn{1}{|c}{-j} & j & k & -k & 1 & -1 & -i & i \\
+                  k & \multicolumn{1}{|c}{k}   & -k & j & -j & -i & i & -1 & 1 \\
+                  -k & \multicolumn{1}{|c}{-k} & k & -j & j & i & -i & 1 & -1
+            \end{array}\)
+        \end{definition}
+
+        \newline
+
+        \subsection{Гомоморфизм}
+
+        Отображение \(f:G \to G'\) группы \((G, *)\) в группу \((G,\circ)\) называется гомоморфизмом,
+        если \(\forall a, b \in G\) \(\f(a * b) = f(a) \circ f(b)\).
+
+        \underline{Пример:}
+
+        \(\det : GL_n(R) \to R'\) — это \(R \ {0}\) с операцией умножения.
+        Это гомоморфизм, т.к. \(\det (A * B) = \det A * \det B\)
 
     \end{colloq}
 
